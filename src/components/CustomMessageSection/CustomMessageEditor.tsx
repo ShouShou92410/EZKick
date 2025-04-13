@@ -45,12 +45,17 @@ const CustomMessageEditor = ({ id, value: defaultValue, onCompleted }: Props) =>
 				value={value}
 			/>
 			<div className="flex flex-col gap-y-1">
-				<button className="btn btn-square btn-xs btn-success" onClick={onSave}>
-					<CheckIcon />
-				</button>
-				<button className="btn btn-square btn-xs btn-error" onClick={onCancel}>
-					<CrossIcon />
-				</button>
+				<div className="tooltip" data-tip="Save">
+					<button className="btn btn-square btn-xs btn-success" onClick={onSave}>
+						<CheckIcon />
+					</button>
+				</div>
+
+				<div className="tooltip" data-tip="Cancel">
+					<button className="btn btn-square btn-xs btn-error" onClick={onCancel}>
+						<CrossIcon />
+					</button>
+				</div>
 			</div>
 		</>
 	);

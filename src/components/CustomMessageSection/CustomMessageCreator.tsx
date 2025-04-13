@@ -32,9 +32,11 @@ const CustomMessageCreator = () => {
 				placeholder="Enter custom message to add"
 				value={value}
 			/>
-			<button className="btn btn-square btn-xs btn-success" onClick={onAdd}>
-				<PlusIcon width="16" height="16" />
-			</button>
+			<div className="tooltip" data-tip="Add">
+				<button className="btn btn-square btn-xs btn-success" onClick={onAdd}>
+					<PlusIcon width="16" height="16" />
+				</button>
+			</div>
 		</>
 	);
 };
