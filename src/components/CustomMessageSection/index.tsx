@@ -7,7 +7,9 @@ const CustomMessageSection = () => {
 
 	return (
 		<ul className="list w-full">
-			<li className="text-left text-xs opacity-60 p-4 pb-2">Add your custom messages here</li>
+			<li className="text-left text-xs opacity-60 p-4 pb-2">
+				Manage your custom messages here
+			</li>
 
 			<li className="list-row grid-cols-1">
 				<CustomMessageCreator />

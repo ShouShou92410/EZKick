@@ -29,7 +29,7 @@ const CustomMessageCreator = () => {
 			<textarea
 				className="textarea"
 				onChange={(e) => setValue(e.target.value)}
-				placeholder="Enter custom message"
+				placeholder="Enter custom message to add"
 				value={value}
 			/>
 			<button className="btn btn-square btn-xs btn-success" onClick={onAdd}>
