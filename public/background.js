@@ -1,7 +1,7 @@
 (async () => {
 	console.log('Background script running...');
 
-	await chrome.storage.local.remove(['stream', 'autoMessages', 'customMessages']);
+	await chrome.storage.local.remove(['autoMessages']);
 
 	chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 		if (chrome.runtime.lastError) return;

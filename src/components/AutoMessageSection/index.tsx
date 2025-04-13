@@ -12,8 +12,6 @@ const AutoMessageSection = () => {
 		<ul className="list w-full">
 			<li className="text-left text-xs opacity-60 p-4 pb-2">
 				Chat from <b>{stream?.name}</b>
-				<br />
-				(You can change it in the settings)
 			</li>
 
 			{autoMessages.length === 0 ? (
