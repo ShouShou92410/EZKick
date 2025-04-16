@@ -17,6 +17,7 @@ const generateCodeChallenge = async (codeVerifier: string) => {
 const authorize = async () => {
 	const code_verifier = generateCodeVerifier();
 	const code_challenge = await generateCodeChallenge(code_verifier);
+	const authState = crypto.randomUUID();
 
 	const url = new URL(`${import.meta.env.VITE_KICK_ID_BASE_URL}/oauth/authorize`);
 	url.searchParams.append('response_type', 'code');
@@ -25,19 +26,22 @@ const authorize = async () => {
 	url.searchParams.append('scope', 'user:read channel:read chat:write events:subscribe');
 	url.searchParams.append('code_challenge', code_challenge);
 	url.searchParams.append('code_challenge_method', 'S256');
-	url.searchParams.append('state', 'TEMP');
+	url.searchParams.append('state', authState);
 
 	chrome.identity.launchWebAuthFlow(
 		{ url: url.toString(), interactive: true },
 		async (response) => {
 			if (chrome.runtime.lastError) throw chrome.runtime.lastError;
-			if (!response) throw new Error(`handleAuthorization. ${response}`);
+			if (!response) throw new Error(`authorize. ${response}`);
 
 			const error = new URL(response).searchParams.get('error');
-			if (error) throw new Error(`handleAuthorization. ${error}`);
+			if (error) throw new Error(`authorize. ${error}`);
 
 			const code = new URL(response).searchParams.get('code');
-			if (!code) throw new Error(`handleAuthorization.`);
+			if (!code) throw new Error(`authorize. code`);
+
+			const state = new URL(response).searchParams.get('state');
+			if (!state || state !== authState) throw new Error(`authorize. state`);
 
 			const urlToken = new URL(`${import.meta.env.VITE_API_BASE_URL}/api/token`);
 			const responseToken = await fetch(urlToken, {
