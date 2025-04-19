@@ -11,12 +11,12 @@ const AutoMessageSection = () => {
 	return (
 		<ul className="list w-full">
 			<li className="text-left text-xs opacity-60 p-4 pb-2">
-				Chat from <b>{stream?.name}</b>
+				Frequent words from <b>{stream?.name}</b> chat
 			</li>
 
 			{autoMessages.length === 0 ? (
 				<li className="list-row self-center">
-					<span className="loading loading-spinner loading-xl"></span>
+					Analyzing ... <span className="loading loading-spinner" />
 				</li>
 			) : (
 				autoMessages.map(({ id, value }) => (
