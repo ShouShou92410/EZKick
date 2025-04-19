@@ -38,12 +38,6 @@ const AutoMessage = ({ value }: Props) => {
 				))}
 			</div>
 			<div className="flex justify-end gap-x-1">
-				<div className="tooltip" data-tip="Copy">
-					<button className="btn btn-square btn-xs btn-info" onClick={onCopy}>
-						<CopyIcon width="16" height="16" />
-					</button>
-				</div>
-
 				<div className="tooltip" data-tip={canSend ? 'Send' : 'Not authorized'}>
 					<button
 						className="btn btn-square btn-xs btn-success"
@@ -51,6 +45,12 @@ const AutoMessage = ({ value }: Props) => {
 						disabled={!canSend}
 					>
 						<SendIcon width="16" height="16" />
+					</button>
+				</div>
+
+				<div className="tooltip" data-tip="Copy">
+					<button className="btn btn-square btn-xs btn-info" onClick={onCopy}>
+						<CopyIcon width="16" height="16" />
 					</button>
 				</div>
 			</div>
