@@ -8,7 +8,7 @@
 		"48": "icon48.png",
 		"128": "icon128.png"
 	},
-	"description": "Enhance your Kick.com experience with this extension. Effortlessly create reusable custom messages to showcase your favorite emotes and phrases. Stay immersed in the conversation with real-time chat messages generated from active Kick stream.",
+	"description": "Enhance your Kick.com experience by crafting your own custom messages or join the real-time chat with auto-generated text, effortlessly spamming your favorite emotes and combos.",
 	"permissions": ["storage", "tabs", "identity"],
 	"action": {
 		"default_popup": "index.html"
