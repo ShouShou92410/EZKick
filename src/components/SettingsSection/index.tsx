@@ -1,11 +1,14 @@
 import { postLogout } from '../../api';
 import { useToken } from '../TokenProvider/context';
-import { authorize } from './helper';
 import useUser from './useUser';
 
 const SettingsSection = () => {
 	const { userName } = useUser();
 	const { hasToken } = useToken();
+
+	const authorize = () => {
+		chrome.runtime.sendMessage({ type: 'START_OAUTH' });
+	};
 
 	return (
 		<ul className="list grow w-80 items-center gap-y-2">
