@@ -10,7 +10,7 @@
 
 	const handleSetup = () => {
 		setupEmotes();
-		chatListenerId = setInterval(processChat, 10000);
+		chatListenerId = setInterval(processChat, 5000);
 	};
 
 	const isKickStream = () => {
@@ -72,6 +72,7 @@
 			.sort(([, v1], [, v2]) => v2 - v1)
 			.slice(0, 5)
 			.map(([key]) => ({ id: crypto.randomUUID(), value: key }));
+		if (topWords.length < 1) return;
 
 		chrome.storage.local.set({ ['autoMessages']: topWords }, () => {
 			if (chrome.runtime.lastError) console.error(chrome.runtime.lastError);
