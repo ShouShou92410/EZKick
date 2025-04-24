@@ -29,7 +29,7 @@
 		url.searchParams.append('response_type', 'code');
 		url.searchParams.append('client_id', import.meta.env.VITE_CLIENT_ID);
 		url.searchParams.append('redirect_uri', import.meta.env.VITE_REDIRECT_URI);
-		url.searchParams.append('scope', 'user:read channel:read chat:write events:subscribe');
+		url.searchParams.append('scope', 'user:read channel:read chat:write');
 		url.searchParams.append('code_challenge', code_challenge);
 		url.searchParams.append('code_challenge_method', 'S256');
 		url.searchParams.append('state', authState);
