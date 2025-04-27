@@ -3,13 +3,11 @@
 	let chatListenerId = null;
 
 	const handleCleanup = () => {
-		chrome.storage.local.remove(['emotes']);
 		clearInterval(chatListenerId);
 		chatListenerId = null;
 	};
 
 	const handleSetup = () => {
-		setupEmotes();
 		chatListenerId = setInterval(processChat, 5000);
 	};
 
@@ -105,8 +103,20 @@
 
 		switch (type) {
 			case 'URL_CHANGED':
-				if (!isKickStream() && chatListenerId) handleCleanup();
-				if (isKickStream() && !chatListenerId) handleSetup();
+				chrome.storage.local.remove(['emotes', 'autoMessages']);
+
+				if (!isKickStream() && chatListenerId) {
+					handleCleanup();
+				}
+
+				if (isKickStream()) {
+					setupEmotes();
+
+					if (!chatListenerId) {
+						handleSetup();
+					}
+				}
+
 				break;
 			default:
 				break;
