@@ -1,7 +1,8 @@
 {
 	"manifest_version": 3,
 	"name": "EZKick",
-	"version": "1.0",
+	"version": "1.0.2",
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ZsoO6yG3rU1Y42W403WIyI1X8kEBYN3NcqthNr65679XcrdPk+PfRvWRyOZAx9DapdRJOJ/cK2F9En31k2cAK1jFwb36z6ihZfhbsgFmZmTpPKvzgs3dBFJ21cu8bw2iELNxHln5Pl3EqJMRKVtLTnF/kbVIkAkW+drSth5o7l5eg7P3W3MorZ6oDx763f+SKst6E1fcFiIs2oBIhiWtDzu10if/BFVb9uWned3GJgiJ0QAlx7jlKeZk5WyOS8uAnyHEIj9Oon8pqIvtBPM9LSCLcDeXHHKVBfSEtm8QE//qogQ98TKlX0j89u/his58GicSUUmFW+Ea+pFjNY4+QIDAQAB",
 	"icons": {
 		"16": "icon16.png",
 		"32": "icon32.png",

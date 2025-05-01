@@ -1,4 +1,4 @@
-# EZKick
+# [EZKick](https://chromewebstore.google.com/detail/ezkick/dbhncdedoebbbldalofencaakcpkbkhm)
 
 Enhance your [Kick.com](https://kick.com) experience by crafting your own custom messages or join the real-time chat with auto-generated text, effortlessly spamming your favorite emotes and combos.
 
@@ -10,10 +10,14 @@ Enhance your [Kick.com](https://kick.com) experience by crafting your own custom
 
 ## Installation
 
+### Install from Chrome Web Store
+
+-   Download page: [EZKick](https://chromewebstore.google.com/detail/ezkick/dbhncdedoebbbldalofencaakcpkbkhm)
+
 ### Using `.crx` file
 
 1. Download the `.crx` file from the [release page](https://github.com/ShouShou92410/EZKick/releases).
-2. In Google Chrome, navigate to `chrome://extensions/`
+2. In Google Chrome or Microsoft Edge, navigate to `chrome://extensions/`
 3. Enable "Developer mode"
 4. Drag and drop the `.crx` file into the browser
 5. Done!
@@ -30,3 +34,4 @@ Enhance your [Kick.com](https://kick.com) experience by crafting your own custom
 ## Supported Browser
 
 -   Google Chrome
+-   Microsoft Edge
